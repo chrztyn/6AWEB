@@ -1,0 +1,67 @@
+.cv-header {
+  padding-top: 10px;
+  padding-bottom: 5px;
+  margin-top: 50px;
+  background-color: #38404d;
+}
+
+.name {
+  font-size: 2.8rem;
+   text-transform: uppercase;
+  font-weight: 700;
+   text-align: left;
+   margin-left: 30px;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+  color: #ffffff;
+  font-family: "Arial";
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.contact-info {
+  font-size: 0.95rem;
+  color: #d8d8d8;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+   font-style: italic;
+    margin-left: 30px;
+}
+
+.contact-item {
+  display: inline-block;
+
+}
+
+.contact-item strong {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.contact-item a {
+  color: #9b9b9b;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.25s ease;
+}
+
+.contact-item a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.separator {
+  color: #b8b8b8;
+  margin: 0 5px;
+}
+
+.divider {
+  width: 100%;
+  height: 2px;
+  background:  #f0f0f0;
+  opacity: 0.9;
+  margin-top: 12px;
+}
