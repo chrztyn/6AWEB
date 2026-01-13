@@ -1,0 +1,117 @@
+<div class = "card">
+<h3>Date Pipe</h3>
+<div>
+   Today's date :- {{presentDate | date }}
+</div>
+
+<div> This is a short date :- {{presentDate | date: 'shortDate' }} <br/>
+This line shows the full date :- {{presentDate | date: 'fullDate' }} <br/>
+This will show a formatted date:- {{presentDate | date:'M/dd/yyyy'}} <br/>
+This indicates the hours and minutes:- {{presentDate | date:'h:mm'}} <br/>
+
+Christine Mae Yunun </div>
+</div>
+
+<!-- Chained Pipes -->
+ <div class = "card">
+  <h3>Chained Pipes</h3>
+  <div>
+    Date with uppercase : - {{presentDate | date: 'fullDate' | uppercase}} <br/>
+    Date with lowercase : - {{presentDate | date: 'medium' | lowercase}} <br/>
+  </div>
+</div>
+
+<!-- Async Pipes -->
+  <div class = "card">
+    <h3>Async Pipe</h3>
+  <div>
+    Seconds changing in Time: {{ time$ | async | date:'mediumTime'}}
+  </div>
+ </div>
+
+<!-- Currency Pipe -->
+<div class="card receipt">
+  <h3 class="receipt-title">RECEIPT</h3>
+  <p class="store-name">Christine Mae Yunun</p>
+
+  <div class="divider"></div>
+
+  <div class="receipt-row">
+    <span>Item Price</span>
+    <span>{{ price | currency }}</span>
+  </div>
+
+  <div class="receipt-row">
+    <span>Price (INR)</span>
+    <span>{{ price | currency:'INR' }}</span>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="receipt-row total">
+    <span>TOTAL</span>
+    <span>{{ price | currency }}</span>
+  </div>
+
+  <div class="divider"></div>
+
+  <p class="receipt-footer">
+    {{ presentDate | date:'medium' }} <br />
+    Thank you for shopping!
+  </p>
+</div>
+
+<!-- Slice Pipe -->
+<div class = "card">
+  <h3>Slice Pipe</h3>
+  <div>
+    <p>Start index:- {{Fruits | slice:2}}</p>
+    <p>Start and end index:- {{Fruits | slice:1:4}}</p>
+    <p>Negative index:- {{Fruits | slice: -2}}</p>
+    <p>Negative start and end index:- {{Fruits | slice: -4:-2}}</p>
+  </div>
+</div>
+
+<!-- Decimal Pipe -->
+ <div class = "card">
+  <div style="text-align:left">
+    <h3>Decimal Pipe</h3>
+    <p>{{decimalNum1 | number}}</p>
+    <p>{{decimalNum2 | number}}</p>
+  </div>
+</div>
+
+<!-- Own Examples -->
+
+<!-- 1. Percent Pipe -->
+<div class="card">
+  <h3>Percent Pipe</h3>
+
+  <p>Default percentage:
+    {{ decimalNum1 | percent }}
+  </p>
+
+  <p>Two decimal places:
+    {{ decimalNum1 | percent:'1.2-2' }}
+  </p>
+
+  <p>Another value:
+    {{ decimalNum2 | percent:'1.1-1' }}
+  </p>
+</div>
+<!-- 2. Title Case Pipe -->
+<div class = "card">
+  <h3>Title Case Pipe</h3>
+<img
+    src="https://m.media-amazon.com/images/M/MV5BOTQwYmRhNGQtODI2Mi00ZTRlLTk0Y2QtY2NkNjE1MGNhNTgwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+    alt="Title Case Example"
+    class="card-img"
+  >
+  <p>Movie Title: {{value | titlecase}}</p>
+</div>
+
+<!-- 3. Json Pipe -->
+<div class="card">
+  <h3>JSON Pipe</h3>
+  <pre>{{ emp | json }}</pre>
+</div>
