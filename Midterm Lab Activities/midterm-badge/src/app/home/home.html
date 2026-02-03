@@ -1,0 +1,13 @@
+<h1>Welcome!</h1>
+<h2>This portal pulls remote records and shares them across pages</h2>
+
+<h2>Latest Updates</h2>
+<p>Date: {{ today | date:'fullDate' }}</p>
+<ul>
+  <li *ngFor="let post of posts$ | async | slice:0:5">
+    <strong>{{ post.title | titleCaseWords }}</strong>
+    <p>{{ post.body }}</p>
+  </li>
+</ul>
+
+
